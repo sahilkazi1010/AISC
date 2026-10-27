@@ -1,0 +1,11 @@
+% Series resistance
+series(R1, R2, Req) :-
+    Req is R1 + R2.
+
+% Parallel resistance
+parallel(R1, R2, Req) :-
+    Req is (R1 * R2) / (R1 + R2).
+
+cmd
+?- series(10, 20, R).
+?- parallel(10, 20, R).
